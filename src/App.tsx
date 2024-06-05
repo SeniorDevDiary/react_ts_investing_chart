@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { TradingChart } from "./components/CandlestickChart";
+import { InvestmentChart } from "./components/InvestmentChart";
 
-function App() {
+import img from "./logov3.png";
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ margin: "0 12px" }}>
+      <div
+        style={{
+          width: "130px",
+          height: "90px",
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+        }}
+      >
+        <img
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          src={img}
+          alt=""
+        />
+      </div>
+      <InvestmentChart />
     </div>
   );
-}
-
-export default App;
+};
